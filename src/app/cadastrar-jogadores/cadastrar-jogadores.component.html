@@ -1,0 +1,53 @@
+<button routerLink="/">Principal</button>
+
+<form [formGroup]="formulario" (submit)="salvar()">
+  <div>
+    <input id="nome" type="text" formControlName="nome" placeholder="Robson" />
+    <label for="nome">Nome</label>
+  </div>
+  <div>
+    <input
+      id="corAzul"
+      type="radio"
+      value="AZUL"
+      name="cor"
+      formControlName="cor"
+    />
+    <label for="corAzul">Azul</label>
+  </div>
+  <div>
+    <input
+      id="corLaranja"
+      type="radio"
+      value="LARANJA"
+      name="cor"
+      formControlName="cor"
+    />
+    <label for="corLaranja">Laranja</label>
+  </div>
+  <div>
+    <input
+      id="corMadeira"
+      type="radio"
+      value="MADEIRA"
+      name="cor"
+      formControlName="cor"
+    />
+    <label for="corMadeira">Madeira</label>
+  </div>
+  <div>
+    <input
+      id="corPreto"
+      type="radio"
+      value="PRETO"
+      name="cor"
+      formControlName="cor"
+    />
+    <label for="corPreto">Preto</label>
+  </div>
+
+  <div>
+    <button>Cancelar</button>
+    <button type="submit" [disabled]="!this.formulario.valid">Salvar</button>
+  </div>
+</form>

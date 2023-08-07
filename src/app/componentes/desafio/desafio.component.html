@@ -1,0 +1,5 @@
+<div class="bloco" [ngClass]="'itens-' + cores.length">
+  <ng-container *ngFor="let cor of cores">
+    <div class="cor" [ngClass]="cor"></div>
+  </ng-container>
+</div>

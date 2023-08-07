@@ -1,0 +1,21 @@
+<button routerLink="/">Principal</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jogador of jogadores">
+      <td>{{ jogador.nome }}</td>
+      <td>{{ jogador.cor }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button [disabled]="jogadores.length == 4" routerLink="/cadastrar-jogador" >Cadastrar Jogadores</button>
+<button [disabled]="jogadores.length == 0" (click)="iniciarPartida()">
+  Iniciar Partida
+</button>

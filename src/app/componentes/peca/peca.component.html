@@ -1,0 +1,19 @@
+<div *ngIf="peca; else vazio" class="peca" [ngClass]="peca.cor">
+  <div class="cor" [ngClass]="peca.cor"></div>
+
+  <div class="conteudo">
+    <div class="espaco passos contorno" [ngClass]="peca.cor">
+      {{ peca.passos }}
+    </div>
+
+    <app-desafio
+      *ngFor="let desafio of peca.desafios"
+      class="espaco contorno"
+      [desafio]="desafio" [ngClass]="peca.cor"
+    ></app-desafio>
+  </div>
+</div>
+
+<ng-template #vazio>
+  <div class="peca"></div>
+</ng-template>

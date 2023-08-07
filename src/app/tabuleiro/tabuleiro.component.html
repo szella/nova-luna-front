@@ -1,0 +1,30 @@
+<button routerLink="/">Principal</button>
+
+<button (click)="carregarTabuleiro()">Atualizar</button>
+
+<div class="tabuleiro">
+  <div class="pecas">
+    <ng-container *ngFor="let peca of tabuleiro.pecas; let i = index">
+      <div class="lua" *ngIf="i === tabuleiro.posicaoLua">
+        <img src="/assets/lua.svg">
+      </div>
+      <app-peca
+      *ngIf="i !== tabuleiro.posicaoLua"
+      [peca]="peca" (click)="pegarPeca(i)"></app-peca>
+    </ng-container>
+  </div>
+
+  <div class="casas">
+    <ng-container *ngFor="let casa of tabuleiro.casas; let i = index">
+      <div class="casa">
+        <h1>Casa {{ i + 1 }}</h1>
+        <div class="jogadores">
+          <ng-container *ngFor="let jogador of casa.jogadores">
+            <div class="cor" [ngClass]="jogador.cor"></div>
+            {{ jogador.cor }} - {{ jogador.nome }}
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500");
+
+.AMARELO {
+  background-color: #f9d554;
+
+  &.contorno {
+    border: solid 1px #be9e2a;
+    box-sizing: border-box;
+
+    &.passos {
+      color: #be9e2a;
+    }
+  }
+}
+
+.AZUL {
+  background-color: #2f76b4;
+  &.contorno {
+    border: solid 1px #154b79;
+    box-sizing: border-box;
+
+    &.passos {
+      color: #154b79;
+    }
+  }
+}
+
+.VERDE {
+  background-color: #91bd4f;
+  &.contorno {
+    border: solid 1px #518306;
+    box-sizing: border-box;
+
+    &.passos {
+      color: #518306;
+    }
+  }
+}
+
+.VERMELHO {
+  background-color: #c84f2f;
+  &.contorno {
+    border: solid 1px #89331c;
+    box-sizing: border-box;
+
+    &.passos {
+      color: #89331c;
+    }
+  }
+}
