@@ -2,6 +2,9 @@
 
 <button (click)="carregarTabuleiro()">Atualizar</button>
 
+<button (click)="carregarPecas()">Carregar Peças</button>
+
+
 <div class="tabuleiro">
   <div class="pecas">
     <ng-container *ngFor="let peca of tabuleiro.pecas; let i = index">

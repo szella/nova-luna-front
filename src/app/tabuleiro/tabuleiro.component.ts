@@ -30,4 +30,10 @@ export class TabuleiroComponent implements OnInit {
         this.carregarTabuleiro();
       });
   }
+
+  carregarPecas() {
+    this.service.carregarPecas().subscribe(() => {
+      this.carregarTabuleiro();
+    });
+  }
 }

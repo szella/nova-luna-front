@@ -31,4 +31,8 @@ export class JogoService {
       `${this.API}/pegar-peca/${corJogador}/${posicaoPeca}/0/0`
     );
   }
+
+  carregarPecas(): Observable<void> {
+    return this.http.get<void>(`${this.API}/carregar-pecas`);
+  }
 }
