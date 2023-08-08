@@ -6,12 +6,20 @@
   <div class="pecas">
     <ng-container *ngFor="let peca of tabuleiro.pecas; let i = index">
       <div class="lua" *ngIf="i === tabuleiro.posicaoLua">
-        <img src="/assets/lua.svg">
+        <img src="/assets/lua.svg" />
       </div>
       <app-peca
-      *ngIf="i !== tabuleiro.posicaoLua"
-      [peca]="peca" (click)="pegarPeca(i)"></app-peca>
+        *ngIf="i !== tabuleiro.posicaoLua"
+        [peca]="peca"
+        (click)="pegarPeca(i)"
+      ></app-peca>
     </ng-container>
+  </div>
+
+  <div>
+    <h2>Próximo Jogado</h2>
+    <div class="cor" [ngClass]="tabuleiro.ultimojogador.cor"></div>
+    {{ tabuleiro.ultimojogador.cor }} - {{ tabuleiro.ultimojogador.nome }}
   </div>
 
   <div class="casas">

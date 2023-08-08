@@ -24,8 +24,10 @@ export class TabuleiroComponent implements OnInit {
   }
 
   pegarPeca(posicaoPeca: number) {
-    this.service.pegarPeca('AZUL', posicaoPeca).subscribe(() => {
-      this.carregarTabuleiro();
-    });
+    this.service
+      .pegarPeca(this.tabuleiro.ultimojogador.cor, posicaoPeca)
+      .subscribe(() => {
+        this.carregarTabuleiro();
+      });
   }
 }
